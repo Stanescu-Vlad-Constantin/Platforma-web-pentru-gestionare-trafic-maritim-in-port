@@ -257,7 +257,7 @@ CREATE TABLE tblLimbi_Straine (
 	CONSTRAINT fk_id_MembruEchipaj_limba FOREIGN KEY(id_MembruEchipaj_limba) 
 	REFERENCES tblEchipaj_Vas (id_MembruEchipaj) ON DELETE CASCADE ON UPDATE CASCADE,
 	CONSTRAINT fk_id_angajat_limba FOREIGN KEY(id_angajat_limba) 
-	REFERENCES tblEchipaj_Vas (id_MembruEchipaj) ON DELETE CASCADE ON UPDATE CASCADE
+	REFERENCES tblAngajati_in_portGalati (id_angajat) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 DESCRIBE tblLimbi_Straine;
