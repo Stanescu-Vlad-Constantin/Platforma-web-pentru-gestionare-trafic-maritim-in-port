@@ -1,7 +1,7 @@
 USE portGalatiDatabase;
 
 CREATE TABLE tblCompanie(
-	id_Companie SMALLINT IDENTITY(1,1) PRIMARY KEY ,
+	id_Companie SMALLINT PRIMARY KEY ,
 	numeCompanie VARCHAR(100) NOT NULL,
 	nrVaseDetinute SMALLINT DEFAULT 0,
 	sectorBusiness VARCHAR(100),
@@ -54,7 +54,7 @@ INSERT INTO tblCompanie (id_Companie, numeCompanie, nrVaseDetinute, sectorBusine
 
 
 CREATE TABLE tblVasePort(
-	id_Vas INT IDENTITY(1,1) PRIMARY KEY ,
+	id_Vas INT  PRIMARY KEY ,
 	nrIdentificareIMO CHAR(7) UNIQUE NOT NULL,
 	nrIdentificareMMSI CHAR(9) UNIQUE NOT NULL,
 	indicativ_vas VARCHAR(20) UNIQUE NOT NULL,
@@ -105,7 +105,7 @@ INSERT INTO tblVasePort (id_Vas, numeVas, nrIdentificareIMO, nrIdentificareMMSI,
 
 
 CREATE TABLE tblCaracteristiciVas(
-	id_Caracteristici SMALLINT IDENTITY(1,1) PRIMARY KEY ,
+	id_Caracteristici SMALLINT  PRIMARY KEY ,
 	vas INT,
 	producator VARCHAR(50) NOT NULL,
 	tipVas VARCHAR(50) NOT NULL,
@@ -121,7 +121,7 @@ CREATE TABLE tblCaracteristiciVas(
 
 
 CREATE TABLE tblPorturi(
-	id_Port INT IDENTITY(1,1) PRIMARY KEY,
+	id_Port INT  PRIMARY KEY,
 	UNLOCODE VARCHAR(5) UNIQUE NOT NULL,
 	numePort VARCHAR(100),
 	tara VARCHAR(50),
@@ -138,7 +138,7 @@ CREATE TABLE tblPorturi(
 
 
 CREATE TABLE tblStatusVase(
-	id_Vas_nou INT IDENTITY(1,1) PRIMARY KEY,
+	id_Vas_nou INT  PRIMARY KEY,
 	nrIdentificareIMO CHAR(7) UNIQUE NOT NULL,
 	nrIdentificareMMSI CHAR(7) UNIQUE NOT NULL,
 	indicativ_vas VARCHAR(20) UNIQUE NOT NULL,
@@ -161,7 +161,7 @@ CREATE TABLE tblStatusVase(
 
 
 CREATE TABLE tblStatisticiVase(
-	id_Statistici SMALLINT IDENTITY(1,1) PRIMARY KEY,
+	id_Statistici SMALLINT  PRIMARY KEY,
 	nr_vasePortGalati SMALLINT,
 	nr_vasePlecateLast24h SMALLINT,
 	nr_vaseSositeLast24h SMALLINT,
@@ -172,7 +172,7 @@ CREATE TABLE tblStatisticiVase(
 
 
 CREATE TABLE tblLocuriAcostare(
-    	doc_id INT IDENTITY(1,1) PRIMARY KEY,
+    	doc_id INT  PRIMARY KEY,
 	nr_loc VARCHAR(10),
     	numeVas VARCHAR(100),
     	tipVas VARCHAR(50),
@@ -186,7 +186,7 @@ CREATE TABLE tblLocuriAcostare(
 
 
 CREATE TABLE tblEchipajVas (
-	id_MembruEchipaj INT IDENTITY(1,1) PRIMARY KEY,
+	id_MembruEchipaj INT  PRIMARY KEY,
 	id_Vas_Echipaj INT,
 	Rol varchar(50) NOT NULL,
 	numeMembruEchipaj VARCHAR(50) NOT NULL,
@@ -205,7 +205,7 @@ CREATE TABLE tblEchipajVas (
 
 
 CREATE TABLE tblPasageri (
-   	id_Pasager INT IDENTITY(1,1) PRIMARY KEY,
+   	id_Pasager INT  PRIMARY KEY,
     	id_Vas_Pasageri INT,
     	numePasager VARCHAR(50) NOT NULL,
     	prenumePasager VARCHAR(50) NOT NULL,
@@ -226,7 +226,7 @@ CREATE TABLE tblPasageri (
 
 
 CREATE TABLE tblDocumentePasageri (
-   	document_id_pasager INT IDENTITY(1,1) PRIMARY KEY,
+   	document_id_pasager INT  PRIMARY KEY,
    	id_Pasager_doc INT,	
     	Tip_document_pasager VARCHAR(50) NOT NULL,
     	numar_Document VARCHAR(50) NOT NULL,
@@ -241,7 +241,7 @@ CREATE TABLE tblDocumentePasageri (
 
 
 CREATE TABLE tblDocumenteEchipajVas (
-    	document_id_echipaj INT IDENTITY(1,1) PRIMARY KEY,
+    	document_id_echipaj INT  PRIMARY KEY,
     	id_MembruEchipaj_doc INT, 
     	Tip_document_echipaj VARCHAR(50) NOT NULL,
     	numar_Document VARCHAR(50) NOT NULL,
@@ -256,7 +256,7 @@ CREATE TABLE tblDocumenteEchipajVas (
 
 
 CREATE TABLE tblBagajePasageri (
-	id_bagaj INT IDENTITY(1,1) PRIMARY KEY,
+	id_bagaj INT  PRIMARY KEY,
 	id_pasager_bagaje INT ,
 	greutate DECIMAL(10,2),
 	Tip_bagaj VARCHAR(50) NOT NULL,
@@ -267,7 +267,7 @@ CREATE TABLE tblBagajePasageri (
 
 
 CREATE TABLE tblFaruri(
-	id_Far SMALLINT IDENTITY(1,1) PRIMARY KEY,
+	id_Far SMALLINT  PRIMARY KEY,
 	Cod_ARLHS VARCHAR(10) UNIQUE NOT NULL,
 	numeFar VARCHAR(50),
 	tara VARCHAR(20),
@@ -312,7 +312,7 @@ INSERT INTO tblFaruri (id_Far,numeFar, Cod_ARLHS, tara, zonaLocalizare, Tip_ilum
 
 
 CREATE TABLE tblAngajatiPort (
-	IdAngajat INT IDENTITY(1,1) PRIMARY KEY,
+	IdAngajat INT  PRIMARY KEY,
 	Rol varchar(100) NOT NULL,
 	numeAngajat VARCHAR(50) NOT NULL,
 	departament VARCHAR(100),
@@ -368,7 +368,7 @@ VALUES
 
 
 CREATE TABLE tblServiciiSpeciale (
-	idServiciu INT IDENTITY(1,1) PRIMARY KEY,
+	idServiciu INT  PRIMARY KEY,
 	TipServicii_Speciale VARCHAR(50),
 	id_pasager_serviciu INT,
 	CONSTRAINT fk_id_pasager_serviciu FOREIGN KEY (id_pasager_serviciu) 
@@ -381,7 +381,7 @@ CREATE TABLE tblServiciiSpeciale (
 
 
 CREATE TABLE tblLimbiStraine (
-	id_limbaStraina INT IDENTITY(1,1) PRIMARY KEY,
+	id_limbaStraina INT  PRIMARY KEY,
 	id_MembruEchipaj_limba INT,
 	id_angajat_limba INT,
 	nume_limba varchar(100) NOT NULL,
@@ -395,7 +395,7 @@ CREATE TABLE tblLimbiStraine (
 
 
 CREATE TABLE tblEscalaVase (
-	id_escala INT IDENTITY(1,1) PRIMARY KEY,
+	id_escala INT  PRIMARY KEY,
 	id_Vas_escala INT NOT NULL,
 	id_Port_escala INT NOT NULL,
 	numePortEscala varchar(50),
