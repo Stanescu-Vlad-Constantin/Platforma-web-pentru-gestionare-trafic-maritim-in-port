@@ -1,14 +1,14 @@
 USE portGalatiDatabase;
 
 CREATE TABLE tblCompanie(
-	id_Companie INT PRIMARY KEY ,
-	numeCompanie VARCHAR(255) NOT NULL,
-	nrVaseDetinute INT DEFAULT 0,
-	sectorBusiness VARCHAR(50),
+	id_Companie SMALLINT PRIMARY KEY ,
+	numeCompanie VARCHAR(100) NOT NULL,
+	nrVaseDetinute SMALLINT DEFAULT 0,
+	sectorBusiness VARCHAR(100),
 	adresa VARCHAR (200) NOT NULL,
 	website VARCHAR(100),
-	anulFondarii INT,
-	nrAngajati INT DEFAULT 0,
+	anulFondarii SMALLINT,
+	nrAngajati SMALLINT DEFAULT 0,
 	activ BIT,
 	nrTelefon VARCHAR(20) UNIQUE NOT NULL,
 	email VARCHAR(100) UNIQUE
@@ -59,7 +59,7 @@ CREATE TABLE tblVasePort(
 	nrIdentificareMMSI CHAR(9) UNIQUE NOT NULL,
 	indicativ_vas VARCHAR(20) UNIQUE NOT NULL,
 	tara_de_provenienta VARCHAR(50),
-	numeVas VARCHAR(50),
+	numeVas VARCHAR(100),
 	tipVas VARCHAR(50) NOT NULL,
 	TimpEstimatSosire DATETIME,
 	TimpExactSosire DATETIME,
@@ -105,7 +105,7 @@ INSERT INTO tblVasePort (id_Vas, numeVas, nrIdentificareIMO, nrIdentificareMMSI,
 
 
 CREATE TABLE tblCaracteristiciVas(
-	id_Caracteristici INT PRIMARY KEY ,
+	id_Caracteristici SMALLINT PRIMARY KEY ,
 	vas INT,
 	producator VARCHAR(50) NOT NULL,
 	tipVas VARCHAR(50) NOT NULL,
@@ -113,7 +113,7 @@ CREATE TABLE tblCaracteristiciVas(
 	latime DECIMAL(10,2),
 	lungime DECIMAL (10,2),
 	adancime DECIMAL (10,2),
-	anulConstruirii INT DEFAULT 0,
+	anulConstruirii SMALLINT DEFAULT 0,
 	CONSTRAINT fk_vas FOREIGN KEY (vas) 
 	REFERENCES tblVasePort(id_Vas) ON DELETE CASCADE ON UPDATE CASCADE
 );
@@ -123,13 +123,13 @@ CREATE TABLE tblCaracteristiciVas(
 CREATE TABLE tblPorturi(
 	id_Port INT PRIMARY KEY,
 	UNLOCODE VARCHAR(5) UNIQUE NOT NULL,
-	numePort VARCHAR(20),
-	tara VARCHAR(20),
-	oras VARCHAR(20),
-	fusOrar CHAR(6),
+	numePort VARCHAR(100),
+	tara VARCHAR(50),
+	oras VARCHAR(50),
+	fusOrar DATETIMEOFFSET(6),
 	tipPort VARCHAR(50),
 	latitudine DECIMAL(10, 8),
-    longitudine DECIMAL(11, 8),
+    	longitudine DECIMAL(11, 8),
 	informatii_de_contact VARCHAR(100)
 );
 
@@ -161,7 +161,7 @@ CREATE TABLE tblStatusVase(
 
 
 CREATE TABLE tblStatisticiVase(
-	id_Statistici INT PRIMARY KEY,
+	id_Statistici SMALLINT PRIMARY KEY,
 	nr_vasePortGalati SMALLINT,
 	nr_vasePlecateLast24h SMALLINT,
 	nr_vaseSositeLast24h SMALLINT,
@@ -172,15 +172,15 @@ CREATE TABLE tblStatisticiVase(
 
 
 CREATE TABLE tblLocuriAcostare(
-    doc_id INT PRIMARY KEY,
+    	doc_id INT PRIMARY KEY,
 	nr_loc VARCHAR(10),
-    numeVas VARCHAR(100),
-    tipVas VARCHAR(50),
+    	numeVas VARCHAR(100),
+    	tipVas VARCHAR(50),
 	lungime_doc DECIMAL (10,2),
 	adancime_maxima DECIMAL (10,2),
-    timpEstimatSosire DATETIME,
-    timpEstimatPlecare DATETIME,
-    Status_disponibilitate VARCHAR(100)
+   	timpEstimatSosire DATETIME,
+    	timpEstimatPlecare DATETIME,
+    	Status_disponibilitate VARCHAR(100)
 );
 
 
@@ -190,11 +190,11 @@ CREATE TABLE tblEchipajVas (
 	id_Vas_Echipaj INT,
 	Rol varchar(50) NOT NULL,
 	numeMembruEchipaj VARCHAR(50) NOT NULL,
-    prenumeMembruEchipaj VARCHAR(50) NOT NULL,
-	nrAni_Experienta int DEFAULT 0,
+    	prenumeMembruEchipaj VARCHAR(50) NOT NULL,
+	nrAni_Experienta TINYINT DEFAULT 0,
 	nationalitate varchar(100),
 	data_de_nastere date,
-	nrTelefon VARCHAR(15) UNIQUE,
+	nrTelefon VARCHAR(20) UNIQUE,
 	Sex_membruEchipaj VARCHAR(50),
 	CONSTRAINT fk_id_Vas_Echipaj FOREIGN KEY (id_Vas_Echipaj) 
 	REFERENCES tblVasePort(id_Vas) ON DELETE CASCADE ON UPDATE CASCADE
@@ -205,19 +205,19 @@ CREATE TABLE tblEchipajVas (
 
 
 CREATE TABLE tblPasageri (
-    id_Pasager INT PRIMARY KEY,
-    id_Vas_Pasageri INT,
-    numePasager VARCHAR(50) NOT NULL,
-    prenumePasager VARCHAR(50) NOT NULL,
-    nationalitate varchar(100),
+   	id_Pasager INT PRIMARY KEY,
+    	id_Vas_Pasageri INT,
+    	numePasager VARCHAR(50) NOT NULL,
+    	prenumePasager VARCHAR(50) NOT NULL,
+    	nationalitate varchar(100),
 	data_de_nastere date,
-    Cod_de_bare_Bilet VARCHAR(12) UNIQUE,
-    nrLoc_Scaun VARCHAR(10),
-    port_imbarcare VARCHAR(50),
-	nrTelefon VARCHAR(15) UNIQUE,
+    	Cod_de_bare_Bilet VARCHAR(12) UNIQUE,
+    	nrLoc_Scaun VARCHAR(10),
+    	port_imbarcare VARCHAR(50),
+	nrTelefon VARCHAR(20) UNIQUE,
 	Sex_Pasager VARCHAR(20),
 	email VARCHAR(100) UNIQUE,
-    CONSTRAINT fk_id_Vas_Pasager FOREIGN KEY (id_Vas_Pasageri) 
+    	CONSTRAINT fk_id_Vas_Pasager FOREIGN KEY (id_Vas_Pasageri) 
 	REFERENCES tblVasePort(id_Vas) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
@@ -226,14 +226,14 @@ CREATE TABLE tblPasageri (
 
 
 CREATE TABLE tblDocumentePasageri (
-    document_id_pasager INT PRIMARY KEY,
-    id_Pasager_doc INT,	
-    Tip_document_pasager VARCHAR(50) NOT NULL,
-    numar_Document VARCHAR(50) NOT NULL,
-    autoritatea_emitenta VARCHAR(50) NOT NULL,
+   	document_id_pasager INT PRIMARY KEY,
+   	id_Pasager_doc INT,	
+    	Tip_document_pasager VARCHAR(50) NOT NULL,
+    	numar_Document VARCHAR(50) NOT NULL,
+    	autoritatea_emitenta VARCHAR(50) NOT NULL,
 	data_emiterii DATE,
-    data_expirarii DATE,
-    CONSTRAINT fk_id_Pasager FOREIGN KEY (id_Pasager_doc) 
+    	data_expirarii DATE,
+    	CONSTRAINT fk_id_Pasager FOREIGN KEY (id_Pasager_doc) 
 	REFERENCES tblPasageri(id_Pasager) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
@@ -241,14 +241,14 @@ CREATE TABLE tblDocumentePasageri (
 
 
 CREATE TABLE tblDocumenteEchipajVas (
-    document_id_echipaj INT PRIMARY KEY,
-    id_MembruEchipaj_doc INT, 
-    Tip_document_echipaj VARCHAR(50) NOT NULL,
-    numar_Document VARCHAR(50) NOT NULL,
-    autoritatea_emitenta VARCHAR(50) NOT NULL,
+    	document_id_echipaj INT PRIMARY KEY,
+    	id_MembruEchipaj_doc INT, 
+    	Tip_document_echipaj VARCHAR(50) NOT NULL,
+    	numar_Document VARCHAR(50) NOT NULL,
+    	autoritatea_emitenta VARCHAR(50) NOT NULL,
 	data_emiterii DATE,
-    data_expirarii DATE,
-    CONSTRAINT fk_id_MembruEchipaj FOREIGN KEY (id_MembruEchipaj_doc) 
+    	data_expirarii DATE,
+    	CONSTRAINT fk_id_MembruEchipaj FOREIGN KEY (id_MembruEchipaj_doc) 
 	REFERENCES tblEchipajVas(id_MembruEchipaj) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
@@ -274,11 +274,11 @@ CREATE TABLE tblFaruri(
 	zonaLocalizare VARCHAR(50),
 	anulConstruirii INT DEFAULT 0,
 	nr_flashuri SMALLINT,
-	Tip_iluminare VARCHAR (50) NOT NULL,
+	Tip_iluminare VARCHAR(50) NOT NULL,
 	culori_semnal_luminos VARCHAR(50),
-	inaltimea_focala VARCHAR (20),
-	distanta_focalizare_lumini VARCHAR (10),
-	detalii_structuraFar VARCHAR (100),
+	inaltimea_focala VARCHAR(20),
+	distanta_focalizare_lumini VARCHAR(10),
+	detalii_structuraFar VARCHAR(100),
 	latitudine DECIMAL(10, 8),
     longitudine DECIMAL(11, 8) 
 );
@@ -316,10 +316,10 @@ CREATE TABLE tblAngajatiPort (
 	Rol varchar(100) NOT NULL,
 	numeAngajat VARCHAR(50) NOT NULL,
 	departament VARCHAR(100),
-    prenumeAngajat VARCHAR(50) NOT NULL,
+    	prenumeAngajat VARCHAR(50) NOT NULL,
 	nationalitate varchar(100),
 	Data_angajarii date,
-	nrTelefon VARCHAR(15) UNIQUE NOT NULL,
+	nrTelefon VARCHAR(20) UNIQUE NOT NULL,
 	Sex_AngajatPort VARCHAR(50)
 );
 
@@ -369,7 +369,7 @@ VALUES
 
 CREATE TABLE tblServiciiSpeciale (
 	idServiciu INT PRIMARY KEY,
-	Servicii_Speciale VARCHAR(50),
+	TipServicii_Speciale VARCHAR(50),
 	id_pasager_serviciu INT,
 	CONSTRAINT fk_id_pasager_serviciu FOREIGN KEY (id_pasager_serviciu) 
 	REFERENCES tblPasageri(id_Pasager) ON DELETE CASCADE ON UPDATE CASCADE
