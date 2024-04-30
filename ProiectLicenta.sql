@@ -133,7 +133,14 @@ CREATE TABLE tblPorturi(
 	informatii_de_contact VARCHAR(100)
 );
 
-
+INSERT INTO tblPorturi (id_Port, UNLOCODE, numePort, tara, oras, fusOrar, tipPort, latitudine, longitudine, informatii_de_contact) VALUES
+(1, 'USNYC', 'Port of New York', 'USA', 'New York', '2024-04-30 00:08:00 -05:00', 'Container', 40.7128, -74.0060, 'info@portofnewyork.com'),
+(2, 'CNHKG', 'Port of Hong Kong', 'China', 'Hong Kong', '2024-04-30 13:08:00 +08:00', 'Container', 22.3193, 114.1694, 'info@porthongkong.cn'),
+(3, 'SGSGP', 'Port of Singapore', 'Singapore', 'Singapore', '2024-04-30 13:08:00 +08:00', 'Container', 1.3521, 103.8198, 'info@portofsingapore.sg'),
+(4, 'NLRTM', 'Port of Rotterdam', 'Netherlands', 'Rotterdam', '2024-04-30 06:08:00 +01:00', 'Container', 51.9225, 4.4792, 'info@portofrotterdam.nl'),
+(5, 'JPTKO', 'Port of Tokyo', 'Japan', 'Tokyo', '2024-04-30 14:08:00 +09:00', 'Container', 35.6895, 139.6917, 'info@portoftokyo.jp'),
+(6, 'DEAUX', 'Port of Marseille', 'France', 'Marseille', '2024-04-30 07:08:00 +02:00', 'Container', 43.2965, 5.3698, 'info@portofmarseille.fr'),
+(7, 'ESALG', 'Port of Algeciras', 'Spain', 'Algeciras', '2024-04-30 07:08:00 +02:00', 'Container', 36.1408, -5.4569, 'info@portofalgeciras.es');
 
 
 
