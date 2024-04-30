@@ -141,7 +141,19 @@ INSERT INTO tblPorturi (id_Port, UNLOCODE, numePort, tara, oras, fusOrar, tipPor
 (5, 'JPTKO', 'Port of Tokyo', 'Japan', 'Tokyo', '2024-04-30 14:08:00 +09:00', 'Container', 35.6895, 139.6917, 'info@portoftokyo.jp'),
 (6, 'DEAUX', 'Port of Marseille', 'France', 'Marseille', '2024-04-30 07:08:00 +02:00', 'Container', 43.2965, 5.3698, 'info@portofmarseille.fr'),
 (7, 'ESALG', 'Port of Algeciras', 'Spain', 'Algeciras', '2024-04-30 07:08:00 +02:00', 'Container', 36.1408, -5.4569, 'info@portofalgeciras.es');
-
+(8, 'AUMEL', 'Port of Melbourne', 'Australia', 'Melbourne', '2024-04-30 15:08:00 +10:00', 'Container', -37.8136, 144.9631, 'info@portofmelbourne.com.au'),
+(9, 'KRINC', 'Incheon Port', 'South Korea', 'Incheon', '2024-04-30 14:08:00 +09:00', 'Container', 37.4563, 126.7052, 'info@incheonport.kr'),
+(10, 'THBKK', 'Port of Bangkok', 'Thailand', 'Bangkok', '2024-04-30 12:08:00 +07:00', 'Container', 13.7563, 100.5018, 'info@portofbangkok.th'),
+(11, 'BRSSA', 'Port of Santos', 'Brazil', 'Santos', '2024-04-30 01:08:00 -03:00', 'Container', -23.9542, -46.3330, 'info@portofsantos.com.br'),
+(12, 'ARBAH', 'Port of Bahía Blanca', 'Argentina', 'Bahía Blanca', '2024-04-30 02:08:00 -03:00', 'Container', -38.7196, -62.2724, 'info@portofbahiablanca.ar'),
+(13, 'EGPSD', 'Port Said', 'Egypt', 'Port Said', '2024-04-30 08:08:00 +02:00', 'Container', 31.2565, 32.2841, 'info@portsaid.eg'),
+(14, 'IDJKT', 'Port of Jakarta', 'Indonesia', 'Jakarta', '2024-04-30 13:08:00 +07:00', 'Container', -6.2088, 106.8456, 'info@portofjakarta.id'),
+(15, 'NGLOS', 'Apapa Port', 'Nigeria', 'Apapa', '2024-04-30 06:08:00 +01:00', 'Container', 6.4516, 3.3527, 'info@apapaport.ng'),
+(16, 'MXVER', 'Port of Veracruz', 'Mexico', 'Veracruz', '2024-04-30 00:08:00 -05:00', 'Container', 19.1738, -96.1342, 'info@portofveracruz.mx'),
+(17, 'FRLEH', 'Port of Le Havre', 'France', 'Le Havre', '2024-04-30 07:08:00 +02:00', 'Container', 49.4938, 0.1077, 'info@portoflehavre.fr'),
+(18, 'GHTEM', 'Tema Harbour', 'Ghana', 'Tema', '2024-04-30 07:08:00 +00:00', 'Container', 5.6385, -0.0186, 'info@temaharbour.gh'),
+(19, 'CAVAN', 'Port of Vancouver', 'Canada', 'Vancouver', '2024-04-30 09:08:00 -07:00', 'Container', 49.2827, -123.1207, 'info@portofvancouver.ca'),
+(20, 'PHMNL', 'Port of Manila', 'Philippines', 'Manila', '2024-04-30 14:08:00 +08:00', 'Container', 14.5995, 120.9842, 'info@portofmanila.ph');
 
 
 CREATE TABLE tblStatusVase(
