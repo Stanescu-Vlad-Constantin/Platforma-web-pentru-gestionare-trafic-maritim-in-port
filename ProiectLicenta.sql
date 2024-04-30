@@ -126,7 +126,7 @@ CREATE TABLE tblPorturi(
 	numePort VARCHAR(100),
 	tara VARCHAR(50),
 	oras VARCHAR(50),
-	fusOrar DATETIMEOFFSET(6),
+	fusOrar DATETIMEOFFSET(0),
 	tipPort VARCHAR(50),
 	latitudine DECIMAL(10, 8),
     	longitudine DECIMAL(11, 8),
@@ -140,7 +140,7 @@ INSERT INTO tblPorturi (id_Port, UNLOCODE, numePort, tara, oras, fusOrar, tipPor
 (4, 'NLRTM', 'Port of Rotterdam', 'Netherlands', 'Rotterdam', '2024-04-30 06:08:00 +01:00', 'Container', 51.9225, 4.4792, 'info@portofrotterdam.nl'),
 (5, 'JPTKO', 'Port of Tokyo', 'Japan', 'Tokyo', '2024-04-30 14:08:00 +09:00', 'Container', 35.6895, 139.6917, 'info@portoftokyo.jp'),
 (6, 'DEAUX', 'Port of Marseille', 'France', 'Marseille', '2024-04-30 07:08:00 +02:00', 'Container', 43.2965, 5.3698, 'info@portofmarseille.fr'),
-(7, 'ESALG', 'Port of Algeciras', 'Spain', 'Algeciras', '2024-04-30 07:08:00 +02:00', 'Container', 36.1408, -5.4569, 'info@portofalgeciras.es');
+(7, 'ESALG', 'Port of Algeciras', 'Spain', 'Algeciras', '2024-04-30 07:08:00 +02:00', 'Container', 36.1408, -5.4569, 'info@portofalgeciras.es'),
 (8, 'AUMEL', 'Port of Melbourne', 'Australia', 'Melbourne', '2024-04-30 15:08:00 +10:00', 'Container', -37.8136, 144.9631, 'info@portofmelbourne.com.au'),
 (9, 'KRINC', 'Incheon Port', 'South Korea', 'Incheon', '2024-04-30 14:08:00 +09:00', 'Container', 37.4563, 126.7052, 'info@incheonport.kr'),
 (10, 'THBKK', 'Port of Bangkok', 'Thailand', 'Bangkok', '2024-04-30 12:08:00 +07:00', 'Container', 13.7563, 100.5018, 'info@portofbangkok.th'),
