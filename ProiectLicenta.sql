@@ -188,7 +188,7 @@ CREATE TABLE tblStatisticiVase(
 	nr_vaseAsteptateNext24h SMALLINT
 );
 
-INSERT INTO tblStatisticiVase (data_curenta, nr_vasePortGalati, nr_vaseSositeLast24h, nr_vasePlecateLast24h, nr_vaseAsteptateNext24h) VALUES
+INSERT INTO tblStatisticiVase (id_Statistici, data_curenta, nr_vasePortGalati, nr_vaseSositeLast24h, nr_vasePlecateLast24h, nr_vaseAsteptateNext24h) VALUES
 (1,'2024-04-30 00:00:00', 150, 25, 20, 30),
 (2,'2024-05-01 00:00:00', 180, 30, 25, 35),
 (3,'2024-05-02 00:00:00', 170, 28, 26, 40),
@@ -202,7 +202,7 @@ INSERT INTO tblStatisticiVase (data_curenta, nr_vasePortGalati, nr_vaseSositeLas
 (11,'2024-05-10 00:00:00', 260, 52, 48, 80),
 (12,'2024-05-11 00:00:00', 280, 58, 53, 85),
 (13,'2024-05-12 00:00:00', 300, 60, 55, 90),
-(14'2024-05-13 00:00:00', 320, 65, 60, 95),
+(14,'2024-05-13 00:00:00', 320, 65, 60, 95),
 (15,'2024-05-14 00:00:00', 310, 60, 55, 100),
 (16,'2024-05-15 00:00:00', 350, 70, 65, 105),
 (17,'2024-05-16 00:00:00', 380, 75, 70, 110),
