@@ -184,7 +184,7 @@ VALUES
 CREATE TABLE tblVaseAsteptate(
 	id_Vas_nou INT  PRIMARY KEY,
 	nrIdentificareIMO CHAR(7) UNIQUE NOT NULL,
-	nrIdentificareMMSI CHAR(7) UNIQUE NOT NULL,
+	nrIdentificareMMSI CHAR(9) UNIQUE NOT NULL,
 	indicativ_vas VARCHAR(20) UNIQUE NOT NULL,
 	tara_de_provenienta VARCHAR(50),
 	numeVas VARCHAR(50) NOT NULL,
@@ -349,7 +349,7 @@ CREATE TABLE tblFaruri(
 	distanta_focalizare_lumini VARCHAR(10),
 	detalii_structuraFar VARCHAR(100),
 	latitudine DECIMAL(10, 8),
-    longitudine DECIMAL(11, 8) 
+    	longitudine DECIMAL(11, 8) 
 );
 
 
