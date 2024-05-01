@@ -122,8 +122,9 @@ INSERT INTO tblVasePort (id_Vas, numeVas, nrIdentificareIMO, nrIdentificareMMSI,
 (17, 'Black Sea Pearl', '7890121', '321098755', 'BSP183', 'Bulgaria', 17, 'Cruiser', '2024-04-17 08:30:00', '2024-04-17 08:28:00'),
 (18, 'Adriatic Voyager', '8901235', '210987154', 'AV856', 'Montenegro', 18 , 'Ferry', '2024-04-17 10:00:00', '2024-04-17 09:58:00'),
 (19, 'North Sea Spirit', '9012344', '109876143', 'NSS189', 'Denmark', 19, 'Nava de Cercetare', '2024-04-17 12:15:00', '2024-04-17 12:12:00'),
-(20, 'South Pacific Pearl', '0121556', '098265432', 'SPP183', 'Fiji', 20 , 'Croaziera', '2024-04-17 14:00:00', '2024-04-17 13:58:00'),
-(21, 'Indian Ocean Explorer', '1324567', '917654321', 'IOE416', 'Seychelles', 21 , 'Yacht', '2024-04-17 16:20:00', '2024-04-17 16:18:00'),
+(20, 'South Pacific Pearl', '0121556', '098265432', 'SPP183', 'Fiji', 20 , 'Croaziera', '2024-04-17 14:00:00', '2024-04-17 13:58:00');
+
+/*(21, 'Indian Ocean Explorer', '1324567', '917654321', 'IOE416', 'Seychelles', 21 , 'Yacht', '2024-04-17 16:20:00', '2024-04-17 16:18:00'),
 (22, 'Arctic Spirit', '2345618', '876543211', 'AS788', 'Greenland', 22 , 'Nava de Marfa', '2024-04-17 18:45:00', '2024-04-17 18:42:00'),
 (23, 'Antarctic Explorer', '3451689', '765132109', 'AE451', 'Chile', 23 , 'Container', '2024-04-17 20:30:00', '2024-04-17 20:32:00'),
 (24, 'Caribbean Voyager', '4567190', '654311098', 'CV781', 'Dominican Republic', 24 , 'Croaziera', '2024-04-17 22:10:00', '2024-04-17 22:08:00'),
@@ -132,7 +133,7 @@ INSERT INTO tblVasePort (id_Vas, numeVas, nrIdentificareIMO, nrIdentificareMMSI,
 (27, 'Black Sea Explorer', '7892123', '321198765', 'BSE113', 'Romania', 27, 'Container', '2024-04-18 12:15:00', '2024-04-18 12:12:00'),
 (28, 'Adriatic Spirit', '8901435', '210087154', 'AS256', 'Italy', 28 , 'Yacht', '2024-04-18 14:30:00', '2024-04-18 14:28:00'),
 (29, 'North Sea Explorer', '9022345', '109176543', 'NSE189', 'United Kingdom', 29, 'Nava de Marfa', '2024-04-18 16:00:00', '2024-04-18 15:58:00'),
-(30, 'South Pacific Spirit', '0324456', '018765432', 'SPS143', 'New Zealand', 30, 'Croaziera', '2024-04-18 18:20:00', '2024-04-18 18:18:00');
+(30, 'South Pacific Spirit', '0324456', '018765432', 'SPS143', 'New Zealand', 30, 'Croaziera', '2024-04-18 18:20:00', '2024-04-18 18:18:00');*/
 
 
 
@@ -173,9 +174,10 @@ VALUES
 (17, 17, 'Trawler Tech', 'Fishing Trawler', 1800.00, 13.2, 6.5, 2018),
 (18, 18, 'Dredge Dynamics', 'Dredger', 7000.00, 21.0, 10.8, 2012),
 (19, 19, 'Fireboat Fabrications', 'Fireboat', 2200.00, 15.8, 7.8, 2017),
-(20, 20, 'Pilot Boat Productions', 'Pilot Boat', 1600.00, 12.0, 6.0, 2019),
+(20, 20, 'Pilot Boat Productions', 'Pilot Boat', 1600.00, 12.0, 6.0, 2019);
+/*
 (21, 21, 'Motor Yacht Masters', 'Motor Yacht', 3500.00, 17.5, 8.0, 2016),
-(22, 22, 'Cargo Carrier Creations', 'Cargo Barge', 4500.00, 18.0, 9.0, 2003);
+(22, 22, 'Cargo Carrier Creations', 'Cargo Barge', 4500.00, 18.0, 9.0, 2003);*/
 
 
 
@@ -217,11 +219,12 @@ VALUES
     (17, 'Antarctic Voyager', '1890123', '341098765', 'AV876', 'Antarctica', 'Petrolier', '2024-05-02 23:15:00', '2024-05-02 23:30:00', 17),
     (18, 'Red Sea Explorer', '8701234', '220987654', 'RE654', 'Egypt', 'Cargo', '2024-05-03 02:45:00', '2024-05-03 03:00:00', 18),
     (19, 'Mekong Trader', '9112345', '119876543', 'MT543', 'Vietnam', 'Tanker', '2024-05-04 05:00:00', '2024-05-04 05:15:00', 19),
-    (20, 'Amazon Jewel', '0143456', '096765432', 'AJ765', 'Brazil', 'Cruise', '2024-05-05 07:30:00', '2024-05-05 07:45:00', 20),
+    (20, 'Amazon Jewel', '0143456', '096765432', 'AJ765', 'Brazil', 'Cruise', '2024-05-05 07:30:00', '2024-05-05 07:45:00', 20);
+	/*
     (21, 'Yellow Sea Spirit', '4234567', '981654321', 'YSS321', 'China', 'Container', '2024-05-06 09:45:00', '2024-05-06 10:00:00', 21),
     (22, 'Arabian Voyager', '1345678', '876523210', 'AV876', 'UAE', 'Tanker', '2024-05-07 12:00:00', '2024-05-07 12:15:00', 22),
     (23, 'Caribbean Trader', '2456789', '765532109', 'CT109', 'Jamaica', 'Cargo', '2024-05-08 14:15:00', '2024-05-08 14:30:00', 23),
-    (24, 'Indian Princess', '3567890', '654311098', 'IP098', 'India', 'Cruise', '2024-05-09 16:45:00', '2024-05-09 17:00:00', 24)
+    (24, 'Indian Princess', '3567890', '654311098', 'IP098', 'India', 'Cruise', '2024-05-09 16:45:00', '2024-05-09 17:00:00', 24)*/
 
 
 CREATE TABLE tblStatisticiVase(
@@ -497,7 +500,6 @@ CREATE TABLE tblEscalaVase (
 	data_escala DATE,
 	motiv_escala VARCHAR(100)
 );
-
 
 
 
