@@ -111,13 +111,36 @@ CREATE TABLE tblCaracteristiciVas(
 	tipVas VARCHAR(50) NOT NULL,
 	tonaj_brut DECIMAL(10,2),
 	latime DECIMAL(10,2),
-	lungime DECIMAL (10,2),
 	adancime DECIMAL (10,2),
 	anulConstruirii SMALLINT DEFAULT 0,
 	CONSTRAINT fk_vas FOREIGN KEY (vas) 
 	REFERENCES tblVasePort(id_Vas) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+INSERT INTO tblCaracteristiciVas (id_Caracteristici, vas, producator, tipVas, tonaj_brut, latime, adancime, anulConstruirii)
+VALUES 
+(1, 1, 'Oceanic Shipyards', 'Cargo Ship', 5000.00, 20.5, 10.2, 2015),
+(2, 2, 'Maritime Builders', 'Oil Tanker', 10000.00, 25.3, 12.5, 2010),
+(3, 3, 'Seafarer Industries', 'Container Ship', 8000.00, 22.0, 11.0, 2018),
+(4, 4, 'Harbor Master', 'Bulk Carrier', 6000.00, 21.8, 11.3, 2012),
+(5, 5, 'Fisherman's Fleet', 'Fishing Vessel', 2000.00, 15.0, 8.0, 2019),
+(6, 6, 'Luxury Yacht Co.', 'Passenger Ship', 7000.00, 24.0, 9.5, 2016),
+(7, 7, 'Tugboat Technologies', 'Tugboat', 1500.00, 12.5, 6.8, 2013),
+(8, 8, 'Sailor's Dream', 'Yacht', 3000.00, 18.2, 8.7, 2017),
+(9, 9, 'Exploration Enterprises', 'Research Vessel', 4000.00, 19.5, 10.0, 2014),
+(10, 10, 'Cruise Liners Ltd.', 'Cruise Ship', 9000.00, 28.0, 13.0, 2011),
+(11, 11, 'Ferry Crafters', 'Ferry', 6000.00, 22.0, 11.5, 2014),
+(12, 12, 'Arctic Shipworks', 'Icebreaker', 8500.00, 23.5, 12.0, 2013),
+(13, 13, 'Submarine Solutions', 'Submarine', 3000.00, 18.0, 7.5, 2017),
+(14, 14, 'Sail Master', 'Sailing Ship', 1200.00, 14.5, 7.0, 2019),
+(15, 15, 'Barge Builders Inc.', 'Barge', 4000.00, 20.0, 10.0, 2015),
+(16, 16, 'Hovercraft Innovations', 'Hovercraft', 2500.00, 16.8, 8.5, 2016),
+(17, 17, 'Trawler Tech', 'Fishing Trawler', 1800.00, 13.2, 6.5, 2018),
+(18, 18, 'Dredge Dynamics', 'Dredger', 7000.00, 21.0, 10.8, 2012),
+(19, 19, 'Fireboat Fabrications', 'Fireboat', 2200.00, 15.8, 7.8, 2017),
+(20, 20, 'Pilot Boat Productions', 'Pilot Boat', 1600.00, 12.0, 6.0, 2019),
+(21, 21, 'Motor Yacht Masters', 'Motor Yacht', 3500.00, 17.5, 8.0, 2016),
+(22, 22, 'Cargo Carrier Creations', 'Cargo Barge', 4500.00, 18.0, 9.0, 2003);
 
 
 CREATE TABLE tblPorturi(
