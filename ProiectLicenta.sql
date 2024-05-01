@@ -196,6 +196,32 @@ CREATE TABLE tblVaseAsteptate(
 	REFERENCES tblPorturi(id_Port) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+INSERT INTO tblVaseAsteptate (id_Vas_nou, numeVas, nrIdentificareIMO, nrIdentificareMMSI, indicativ_vas, tara_de_provenienta, tipVas, timpEstimatSosire, timpExactSosire, portProvenienta)
+VALUES
+    (1, 'Oceanic Voyager', '1234567', '987654321', 'OV113', 'United States', 'Petrolier', '2024-04-15 09:30:00', '2024-04-15 09:45:00', 1),
+    (2, 'Marine Prince', '2345678', '876543210', 'MP456', 'China', 'Cargo', '2024-04-16 11:15:00', '2024-04-16 11:30:00', 2),
+    (3, 'Atlantic Trader', '3456789', '765432109', 'AT789', 'Germany', 'Tanker', '2024-04-17 13:45:00', '2024-04-17 14:00:00', 3),
+    (4, 'Pacific Jewel', '4567890', '654321098', 'PJ123', 'Australia', 'Cruise', '2024-04-18 16:00:00', '2024-04-18 16:15:00', 4),
+    (5, 'Arctic Spirit', '5678901', '543210987', 'AS345', 'Norway', 'Container', '2024-04-19 18:30:00', '2024-04-19 18:45:00', 5),
+    (6, 'Mediterranean Queen', '6789012', '432109876', 'MQ678', 'Italy', 'Petrolier', '2024-04-20 21:00:00', '2024-04-20 21:15:00', 6),
+    (7, 'Caribbean Princess', '7890123', '321098765', 'CP987', 'Bahamas', 'Cruise', '2024-04-21 23:45:00', '2024-04-22 00:00:00', 7),
+    (8, 'Indian Voyager', '8901234', '210987654', 'IV321', 'India', 'Tanker', '2024-04-23 02:15:00', '2024-04-23 02:30:00', 8),
+    (9, 'South China Sea Explorer', '9012345', '109876543', 'SCSE23', 'China', 'Container', '2024-04-24 04:30:00', '2024-04-24 04:45:00', 9),
+    (10, 'North Sea Trader', '0123456', '098765432', 'NST765', 'Netherlands', 'Cargo', '2024-04-25 06:45:00', '2024-04-25 07:00:00', 10),
+    (11, 'Atlantic Voyager', '1234567', '987654321', 'AV543', 'United Kingdom', 'Tanker', '2024-04-26 09:00:00', '2024-04-26 09:15:00', 11),
+    (12, 'Tasmanian Explorer', '2345678', '876543210', 'TE210', 'Australia', 'Container', '2024-04-27 11:30:00', '2024-04-27 11:45:00', 12),
+    (13, 'Bering Trader', '3456789', '765432109', 'BT876', 'Russia', 'Cargo', '2024-04-28 13:45:00', '2024-04-28 14:00:00', 13),
+    (14, 'Adriatic Princess', '4567890', '654321098', 'AP109', 'Italy', 'Cruise', '2024-04-29 16:15:00', '2024-04-29 16:30:00', 14),
+    (15, 'Hawaiian Spirit', '5678901', '543210987', 'HS432', 'USA', 'Tanker', '2024-04-30 18:30:00', '2024-04-30 18:45:00', 15),
+    (16, 'Galapagos Queen', '6789012', '432109876', 'GQ567', 'Ecuador', 'Container', '2024-05-01 21:00:00', '2024-05-01 21:15:00', 16),
+    (17, 'Antarctic Voyager', '7890123', '321098765', 'AV876', 'Antarctica', 'Petrolier', '2024-05-02 23:15:00', '2024-05-02 23:30:00', 17),
+    (18, 'Red Sea Explorer', '8901234', '210987654', 'RE654', 'Egypt', 'Cargo', '2024-05-03 02:45:00', '2024-05-03 03:00:00', 18),
+    (19, 'Mekong Trader', '9012345', '109876543', 'MT543', 'Vietnam', 'Tanker', '2024-05-04 05:00:00', '2024-05-04 05:15:00', 19),
+    (20, 'Amazon Jewel', '0123456', '098765432', 'AJ765', 'Brazil', 'Cruise', '2024-05-05 07:30:00', '2024-05-05 07:45:00', 20),
+    (21, 'Yellow Sea Spirit', '1234567', '987654321', 'YSS321', 'China', 'Container', '2024-05-06 09:45:00', '2024-05-06 10:00:00', 21),
+    (22, 'Arabian Voyager', '2345678', '876543210', 'AV876', 'UAE', 'Tanker', '2024-05-07 12:00:00', '2024-05-07 12:15:00', 22),
+    (23, 'Caribbean Trader', '3456789', '765432109', 'CT109', 'Jamaica', 'Cargo', '2024-05-08 14:15:00', '2024-05-08 14:30:00', 23),
+    (24, 'Indian Princess', '4567890', '654321098', 'IP098', 'India', 'Cruise', '2024-05-09 16:45:00', '2024-05-09 17:00:00', 24)
 
 
 CREATE TABLE tblStatisticiVase(
