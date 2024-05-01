@@ -187,17 +187,14 @@ CREATE TABLE tblStatusVase(
 	tara_de_provenienta VARCHAR(50),
 	numeVas VARCHAR(50) NOT NULL,
 	tipVas VARCHAR (50) NOT NULL,
-	Status_vase VARCHAR(200),
+	statusNavigatie VARCHAR (100)
 	timpEstimatSosire DATETIME,
 	timpExactSosire DATETIME,
 	timpEstimatPlecare DATETIME,
 	timpExactPlecare DATETIME,
-	durata_calatorie VARCHAR(50),
-	distanta_calatorie VARCHAR(50),
 	portProvenienta VARCHAR(50),
 	portDestinatie VARCHAR(50),
-	tipPort VARCHAR(50),
-	statusNavigatie VARCHAR (100)
+	tipPort VARCHAR(50)
 );
 
 
