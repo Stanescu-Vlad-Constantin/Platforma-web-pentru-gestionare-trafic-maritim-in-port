@@ -193,8 +193,7 @@ CREATE TABLE tblStatusVase(
 	timpEstimatPlecare DATETIME,
 	timpExactPlecare DATETIME,
 	portProvenienta VARCHAR(50),
-	portDestinatie VARCHAR(50),
-	tipPort VARCHAR(50)
+	portDestinatie VARCHAR(50)
 );
 
 
