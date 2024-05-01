@@ -187,13 +187,17 @@ CREATE TABLE tblStatusVase(
 	tara_de_provenienta VARCHAR(50),
 	numeVas VARCHAR(50) NOT NULL,
 	tipVas VARCHAR (50) NOT NULL,
-	statusNavigatie VARCHAR (100)
+	descriereNavigatie VARCHAR (100),
 	timpEstimatSosire DATETIME,
 	timpExactSosire DATETIME,
 	timpEstimatPlecare DATETIME,
 	timpExactPlecare DATETIME,
 	portProvenienta VARCHAR(50),
-	portDestinatie VARCHAR(50)
+	portDestinatie VARCHAR(50),
+	CONSTRAINT fk_portProvenienta FOREIGN KEY (portProvenienta) 
+	REFERENCES tblPorturi(id_Port) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT fk_portDestinatie FOREIGN KEY (portDestinatie) 
+	REFERENCES tblPorturi(id_Port) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 
