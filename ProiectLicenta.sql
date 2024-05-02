@@ -88,8 +88,8 @@ INSERT INTO tblPorturi (id_Port, UNLOCODE, numePort, tara, oras, fusOrar, tipPor
 
 CREATE TABLE tblVasePort(
 	id_Vas INT  PRIMARY KEY ,
-	nrIdentificareIMO CHAR(7) UNIQUE NOT NULL,
-	nrIdentificareMMSI CHAR(9) UNIQUE NOT NULL,
+	nrIdentificareIMO VARCHAR(7) UNIQUE NOT NULL,
+	nrIdentificareMMSI VARCHAR(9) UNIQUE NOT NULL,
 	indicativ_vas VARCHAR(20) UNIQUE NOT NULL,
 	tara_de_provenienta VARCHAR(50),
 	numeVas VARCHAR(100),
@@ -185,8 +185,8 @@ VALUES
 
 CREATE TABLE tblVaseAsteptate(
 	id_Vas_nou INT  PRIMARY KEY,
-	nrIdentificareIMO CHAR(7) UNIQUE NOT NULL,
-	nrIdentificareMMSI CHAR(9) UNIQUE NOT NULL,
+	nrIdentificareIMO VARCHAR(7) UNIQUE NOT NULL,
+	nrIdentificareMMSI VARCHAR(9) UNIQUE NOT NULL,
 	indicativ_vas VARCHAR(20) UNIQUE NOT NULL,
 	tara_de_provenienta VARCHAR(50),
 	numeVas VARCHAR(50) NOT NULL,
