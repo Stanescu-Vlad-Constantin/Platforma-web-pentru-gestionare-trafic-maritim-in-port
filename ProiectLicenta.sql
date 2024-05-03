@@ -645,9 +645,9 @@ CREATE TABLE tblEscalaVase (
 	data_escala DATE,
 	motiv_escala VARCHAR(100),
 	CONSTRAINT fk_id_VasEscala FOREIGN KEY(id_Vas_Escala) 
-	REFERENCES tblVaseAsteptate (id_Vas_nou) ON DELETE CASCADE ON UPDATE CASCADE,
+	REFERENCES tblVaseAsteptate (id_Vas_nou) ON DELETE NO OPTION ON UPDATE CASCADE,
 	CONSTRAINT fk_id_PortEscala FOREIGN KEY(id_Port_escala) 
-	REFERENCES tblPorturi (id_Port) ON DELETE CASCADE ON UPDATE CASCADE
+	REFERENCES tblPorturi (id_Port) ON DELETE NO OPTION ON UPDATE CASCADE
 );
 
 
