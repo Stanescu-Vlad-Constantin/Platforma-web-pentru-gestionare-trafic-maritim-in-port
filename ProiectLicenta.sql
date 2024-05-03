@@ -155,7 +155,7 @@ CREATE TABLE tblCaracteristiciVas(
 
 INSERT INTO tblCaracteristiciVas (id_Caracteristici, vas, producator, tipVas, tonaj_brut, latime, adancime, anulConstruirii)
 VALUES 
-(1, 1, 'Oceanic Shipyards', 'Cargo Ship', 5000.00, 20.5, 10.2, 2015),
+(1, 1, 'Oceanic Shipyards', 'Cargo', 5000.00, 20.5, 10.2, 2015),
 (2, 2, 'Maritime Builders', 'Oil Tanker', 10000.00, 25.3, 12.5, 2010),
 (3, 3, 'Seafarer Industries', 'Container Ship', 8000.00, 22.0, 11.0, 2018),
 (4, 4, 'Harbor Master', 'Bulk Carrier', 6000.00, 21.8, 11.3, 2012),
@@ -271,15 +271,35 @@ INSERT INTO tblStatisticiVase (id_Statistici, data_curenta, nr_vasePortGalati, n
 
 CREATE TABLE tblLocuriAcostare(
     	doc_id INT  PRIMARY KEY,
-	nr_loc VARCHAR(10),
-    	numeVas VARCHAR(100),
+	nr_loc VARCHAR(10) UNIQUE,
     	tipVas VARCHAR(50),
 	lungime_doc DECIMAL (10,2),
 	adancime_maxima DECIMAL (10,2),
-   	timpEstimatSosire DATETIME,
-    	timpEstimatPlecare DATETIME,
     	Status_disponibilitate VARCHAR(100)
 );
+
+INSERT INTO tblLocuriAcostare (doc_id, nr_loc, tipVas, lungime_doc, adancime_maxima, Status_disponibilitate)
+VALUES
+    (1,'A101', 'Barca mica', 8, 4, 'Disponibil'),
+    (2,'A102', 'Barca mica', 8, 4, 'Ocupat'),
+    (3,'B201', 'Large Vessel', 25, 12, 'Disponibil'),
+    (4,'B202', 'Large Vessel', 25, 12, 'Disponibil'),
+    (5,'C301', 'Cargo', 40, 20, 'Disponibil'),
+    (6,'C302', 'Cargo', 40, 20, 'Ocupat'),
+    (7,'D401', 'Yacht', 18, 8, 'Disponibil'),
+    (8,'D402', 'Yacht', 18, 8, 'Disponibil'),
+    (9,'E501', 'Barca de pescuit', 10, 5, 'Disponibil'),
+    (10,'E502', 'Barca de pescuit', 10, 5, 'Disponibil'),
+    (11,'F601', 'Barca mica', 8, 4, 'Disponibil'),
+    (12,'F602', 'Barca mica', 8, 4, 'Disponibil'),
+    (13,'G701', 'Large Vessel', 25, 12, 'Ocupat'),
+    (14,'G702', 'Large Vessel', 25, 12, 'Disponibil'),
+    (15,'H801', 'Cargo', 40, 20, 'Disponibil'),
+    (16,'H802', 'Cargo', 40, 20, 'Disponibil'),
+    (17,'I901', 'Yacht', 18, 8, 'Disponibil'),
+    (18,'I902', 'Yacht', 18, 8, 'Ocupat'),
+    (19,'J1001', 'Barca de pescuit', 10, 5, 'Disponibil'),
+    (20,'J1002', 'Barca de pescuit', 10, 5, 'Ocupat');
 
 
 
