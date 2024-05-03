@@ -325,7 +325,7 @@ VALUES
 (3, 1, 'Navigator', 'Choi', 'Seung', 8, 'Coreeană', '1985-08-10', '+82 10-1234-5678', 'Masculin'),
 (4, 1, 'Electrician', 'Müller', 'Anna', 6, 'Germană', '1990-01-25', '+49 1234 567890', 'Feminin'),
 (5, 1, 'Maistru', 'Kawasaki', 'Takashi', 12, 'Japoneză', '1975-11-30', '+81 90-1234-5678', 'Masculin'),
-(6, 2, 'Ofițer de securitate', 'Nguyen', 'Hoa', 18, 'Vietnameză', '1965-09-05', '+84 123 456 789', 'Masculin'),
+(6, 2, 'Ofițer de securitate', 'Nguyen', 'Hoa', 18, 'Vietnameză', '1965-09-05', '+84 123 456 779', 'Masculin'),
 (7, 2, 'Inginer mecanic', 'Lopez', 'Elena', 14, 'Mexicană', '1972-04-12', '+52 1 55 1234 5678', 'Feminin'),
 (8, 2, 'Bucătar', 'Kumar', 'Anjali', 9, 'Indiană', '1988-07-20', '+91 12345 67890', 'Feminin'),
 (9, 2, 'Navigator', 'Andersen', 'Lars', 7, 'Norvegiană', '1993-02-18', '+47 12 34 56 78', 'Masculin'),
