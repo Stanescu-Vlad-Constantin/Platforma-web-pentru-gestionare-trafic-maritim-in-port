@@ -282,8 +282,8 @@ INSERT INTO tblLocuriAcostare (doc_id, nr_loc, tipVas, lungime_doc, adancime_max
 VALUES
     (1,'A101', 'Barca mica', 8, 4, 'Disponibil'),
     (2,'A102', 'Barca mica', 8, 4, 'Ocupat'),
-    (3,'B201', 'Large Vessel', 25, 12, 'Disponibil'),
-    (4,'B202', 'Large Vessel', 25, 12, 'Disponibil'),
+    (3,'B201', 'Vas mare', 25, 12, 'Disponibil'),
+    (4,'B202', 'Vas mare', 25, 12, 'Disponibil'),
     (5,'C301', 'Cargo', 40, 20, 'Disponibil'),
     (6,'C302', 'Cargo', 40, 20, 'Ocupat'),
     (7,'D401', 'Yacht', 18, 8, 'Disponibil'),
@@ -292,8 +292,8 @@ VALUES
     (10,'E502', 'Barca de pescuit', 10, 5, 'Disponibil'),
     (11,'F601', 'Barca mica', 8, 4, 'Disponibil'),
     (12,'F602', 'Barca mica', 8, 4, 'Disponibil'),
-    (13,'G701', 'Large Vessel', 25, 12, 'Ocupat'),
-    (14,'G702', 'Large Vessel', 25, 12, 'Disponibil'),
+    (13,'G701', 'Vas mare', 25, 12, 'Ocupat'),
+    (14,'G702', 'Vas mare', 25, 12, 'Disponibil'),
     (15,'H801', 'Cargo', 40, 20, 'Disponibil'),
     (16,'H802', 'Cargo', 40, 20, 'Disponibil'),
     (17,'I901', 'Yacht', 18, 8, 'Disponibil'),
@@ -362,6 +362,29 @@ CREATE TABLE tblPasageri (
 	REFERENCES tblVasePort(id_Vas) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+INSERT INTO tblPasageri (id_Pasager, id_Vas_Pasageri, numePasager, prenumePasager, nationalitate, data_de_nastere, Cod_de_bare_Bilet, nrLoc_Scaun, port_imbarcare, nrTelefon, Sex_Pasager, email)
+VALUES
+(1, 1, 'Smith', 'Emma', 'Americană', '1990-02-15', 'ABC123456789', 'A12', 'New York', '+1 (555) 123-4567', 'Feminin', 'emma.smith@example.com'),
+(2, 1, 'Garcia', 'Luis', 'Spaniolă', '1985-07-20', 'DEF987654321', 'B23', 'Barcelona', '+34 123 456 789', 'Masculin', 'luis.garcia@example.com'),
+(3, 1, 'Kim', 'Soo Min', 'Coreeană', '1995-04-10', 'GHI246813579', 'C34', 'Seoul', '+82 10-9876-5432', 'Feminin', 'soomin.kim@example.com'),
+(4, 1, 'Müller', 'Hans', 'Germană', '1980-12-25', 'JKL369258147', 'D45', 'Berlin', '+49 172 1234567', 'Masculin', 'hans.muller@example.com'),
+(5, 1, 'Suzuki', 'Takahiro', 'Japoneză', '1978-10-30', 'MNO147258369', 'E56', 'Tokyo', '+81 90-1234-5678', 'Masculin', 'takahiro.suzuki@example.com'),
+(6, 1, 'Nguyen', 'Thi Minh', 'Vietnameză', '1992-03-05', 'PQR582369147', 'F67', 'Ho Chi Minh City', '+84 123 456 789', 'Feminin', 'minh.nguyen@example.com'),
+(7, 1, 'Lopez', 'Ana', 'Mexicană', '1987-09-12', 'STU951753852', 'G78', 'Mexico City', '+52 1 55 1234 5678', 'Feminin', 'ana.lopez@example.com'),
+(8, 1, 'Kumar', 'Rajesh', 'Indiană', '1983-06-18', 'VWX369852147', 'H89', 'Mumbai', '+91 12345 67890', 'Masculin', 'rajesh.kumar@example.com'),
+(9, 1, 'Andersen', 'Erik', 'Norvegiană', '1975-11-08', 'YZA753951852', 'I90', 'Oslo', '+47 12 34 56 78', 'Masculin', 'erik.andersen@example.com'),
+(10, 1, 'Park', 'Ji Eun', 'Coreeană', '1998-08-22', 'BCD123789456', 'J01', 'Busan', '+82 10-1234-5678', 'Feminin', 'jieun.park@example.com'),
+(11, 1, 'Jansen', 'Sophie', 'Olandeză', '1993-05-17', 'EFG456123789', 'K12', 'Amsterdam', '+31 6 12345678', 'Feminin', 'sophie.jansen@example.com'),
+(12, 1, 'Fernandez', 'Diego', 'Spaniolă', '1988-02-03', 'HIJ789456123', 'L23', 'Madrid', '+34 600 123 456', 'Masculin', 'diego.fernandez@example.com'),
+(13, 1, 'Wong', 'Hui Ying', 'Chineză', '1990-09-28', 'KLM987654321', 'M34', 'Shanghai', '+86 138 0012 3456', 'Feminin', 'huiying.wong@example.com'),
+(14, 1, 'Patel', 'Anil', 'Indiană', '1985-04-14', 'NOP369852147', 'N45', 'Mumbai', '+91 98765 43210', 'Masculin', 'anil.patel@example.com'),
+(15, 1, 'Garcia', 'Elena', 'Spaniolă', '1995-11-20', 'QRS123456789', 'O56', 'Barcelona', '+34 612 345 678', 'Feminin', 'elena.garcia@example.com'),
+(16, 1, 'Müller', 'Anna', 'Germană', '1987-07-05', 'TUV987654321', 'P67', 'Berlin', '+49 173 4567890', 'Feminin', 'anna.muller@example.com'),
+(17, 1, 'Choi', 'Yong Jun', 'Coreeană', '1982-01-10', 'VWX369852741', 'Q78', 'Seoul', '+82 10-8765-4321', 'Masculin', 'yongjun.choi@example.com'),
+(18, 1, 'Smith', 'Jennifer', 'Americană', '1973-08-28', 'YZA123456789', 'R89', 'Los Angeles', '+1 (555) 987-6543', 'Feminin', 'jennifer.smith@example.com'),
+(19, 1, 'Nguyen', 'Minh', 'Vietnameză', '1996-06-15', 'BCD789456123', 'S90', 'Ho Chi Minh City', '+84 123 456 789', 'Masculin', 'minh.nguyen@example.com'),
+(20, 1, 'Patel', 'Neha', 'Indiană', '1991-03-02', 'EFG369852147', 'T01', 'Ahmedabad', '+91 98765 43210', 'Feminin', 'neha.patel@example.com');
+
 
 
 
@@ -370,7 +393,7 @@ CREATE TABLE tblDocumentePasageri (
    	document_id_pasager INT  PRIMARY KEY,
    	id_Pasager_doc INT,	
     	Tip_document_pasager VARCHAR(50) NOT NULL,
-    	numar_Document VARCHAR(50) NOT NULL,
+    	numar_Document VARCHAR(50) UNIQUE NOT NULL,
     	autoritatea_emitenta VARCHAR(50) NOT NULL,
 	data_emiterii DATE,
     	data_expirarii DATE,
@@ -378,6 +401,28 @@ CREATE TABLE tblDocumentePasageri (
 	REFERENCES tblPasageri(id_Pasager) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+INSERT INTO tblDocumentePasageri (document_id_pasager, id_Pasager_doc, Tip_document_pasager, numar_Document, autoritatea_emitenta, data_emiterii, data_expirarii)
+VALUES
+(1, 1, 'Pașaport', '123456787', 'US Department of State', '2019-05-10', '2029-05-10'),
+(2, 2, 'Pașaport', '987654322', 'Ministerio de Asuntos Exteriores', '2020-03-15', '2030-03-15'),
+(3, 3, 'Pașaport', '456489012', 'Ministry of Foreign Affairs', '2018-07-20', '2028-07-20'),
+(4, 4, 'Pașaport', '321254987', 'Bundesministerium des Innern', '2017-12-25', '2027-12-25'),
+(5, 5, 'Pașaport', '135192468', 'Ministry of Foreign Affairs', '2019-10-30', '2029-10-30'),
+(6, 6, 'Pașaport', '246201357', 'Bộ Ngoại giao Việt Nam', '2016-09-05', '2026-09-05'),
+(7, 7, 'Pașaport', '987654333', 'Secretaría de Relaciones Exteriores', '2020-04-12', '2030-04-12'),
+(8, 8, 'Pașaport', '123456786', 'Ministry of External Affairs', '2018-07-20', '2028-07-20'),
+(9, 9, 'Pașaport', '456789012', 'Utenriksdepartementet', '2015-11-08', '2025-11-08'),
+(10, 10, 'Pașaport', '789456123', 'Ministry of Foreign Affairs', '2021-06-22', '2031-06-22'),
+(11, 11, 'Pașaport', '234567891', 'Ministerie van Buitenlandse Zaken', '2017-12-17', '2027-12-17'),
+(12, 12, 'Pașaport', '567891234', 'Ministerio de Asuntos Exteriores', '2019-09-03', '2029-09-03'),
+(13, 13, 'Pașaport', '789012245', 'Ministry of Foreign Affairs', '2018-04-28', '2028-04-28'),
+(14, 14, 'Pașaport', '012345678', 'Ministry of External Affairs', '2016-04-14', '2026-04-14'),
+(15, 15, 'Pașaport', '234567891', 'Ministerio de Asuntos Exteriores', '2020-11-20', '2030-11-20'),
+(16, 16, 'Pașaport', '456789012', 'Bundesministerium des Innern', '2018-07-05', '2028-07-05'),
+(17, 17, 'Pașaport', '789012345', 'Ministry of Foreign Affairs', '2015-01-10', '2025-01-10'),
+(18, 18, 'Pașaport', '123456783', 'US Department of State', '2016-08-28', '2026-08-28'),
+(19, 19, 'Pașaport', '345678901', 'Bộ Ngoại giao Việt Nam', '2019-06-15', '2029-06-15'),
+(20, 20, 'Pașaport', '678901234', 'Ministry of External Affairs', '2017-03-02', '2027-03-02');
 
 
 
@@ -385,7 +430,7 @@ CREATE TABLE tblDocumenteEchipajVas (
     	document_id_echipaj INT  PRIMARY KEY,
     	id_MembruEchipaj_doc INT, 
     	Tip_document_echipaj VARCHAR(50) NOT NULL,
-    	numar_Document VARCHAR(50) NOT NULL,
+    	numar_Document VARCHAR(50) UNIQUE NOT NULL,
     	autoritatea_emitenta VARCHAR(50) NOT NULL,
 	data_emiterii DATE,
     	data_expirarii DATE,
@@ -393,6 +438,28 @@ CREATE TABLE tblDocumenteEchipajVas (
 	REFERENCES tblEchipajVas(id_MembruEchipaj) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+INSERT INTO tblDocumenteEchipajVas (document_id_echipaj, id_MembruEchipaj_doc, Tip_document_echipaj, numar_Document, autoritatea_emitenta, data_emiterii, data_expirarii)
+VALUES
+(1, 1, 'Licență de capitan', '123456', 'Autoritatea Maritimă Română', '2018-01-10', '2023-01-10'),
+(2, 2, 'Certificat de inginer', '987654', 'Autoritatea Maritimă Spaniolă', '2019-03-15', '2024-03-15'),
+(3, 3, 'Licență de navigator', '456789', 'Autoritatea Maritimă Coreeană', '2020-07-20', '2025-07-20'),
+(4, 4, 'Certificat de electrician', '321654', 'Autoritatea Maritimă Germană', '2017-12-25', '2022-12-25'),
+(5, 5, 'Certificat de mecanic', '135792', 'Autoritatea Maritimă Japoneză', '2019-10-30', '2024-10-30'),
+(6, 6, 'Certificat de securitate', '246801', 'Autoritatea Maritimă Vietnamiană', '2016-09-05', '2021-09-05'),
+(7, 7, 'Licență de ofițer', '987154', 'Autoritatea Maritimă Mexicană', '2020-04-12', '2025-04-12'),
+(8, 8, 'Certificat de bucătar', '123456', 'Autoritatea Maritimă Indiană', '2018-07-20', '2023-07-20'),
+(9, 9, 'Licență de navigator', '451789', 'Autoritatea Maritimă Norvegiană', '2015-11-08', '2020-11-08'),
+(10, 10, 'Licență de medic', '789456', 'Autoritatea Maritimă Coreeană', '2021-06-22', '2026-06-22'),
+(11, 11, 'Licență de ofițer', '234567', 'Autoritatea Maritimă Olandeză', '2017-12-17', '2022-12-17'),
+(12, 12, 'Certificat de inginer', '567890', 'Autoritatea Maritimă Spaniolă', '2019-09-03', '2024-09-03'),
+(13, 13, 'Certificat de navigator', '789012', 'Autoritatea Maritimă Chineză', '2018-04-28', '2023-04-28'),
+(14, 14, 'Certificat de medic', '012345', 'Autoritatea Maritimă Indiană', '2016-04-14', '2021-04-14'),
+(15, 15, 'Certificat de maistru', '234567', 'Autoritatea Maritimă Spaniolă', '2020-11-20', '2025-11-20'),
+(16, 16, 'Certificat de electrician', '455789', 'Autoritatea Maritimă Germană', '2018-07-05', '2023-07-05'),
+(17, 17, 'Certificat de navigator', '789012', 'Autoritatea Maritimă Chineză', '2015-01-10', '2020-01-10'),
+(18, 18, 'Licență de capitan', '113456', 'Autoritatea Maritimă Română', '2016-08-28', '2021-08-28'),
+(19, 19, 'Certificat de securitate', '345678', 'Autoritatea Maritimă Vietnamiană', '2019-06-15', '2024-06-15'),
+(20, 20, 'Certificat de bucătar', '678901', 'Autoritatea Maritimă Indiană', '2017-03-02', '2022-03-02');
 
 
 
@@ -405,6 +472,28 @@ CREATE TABLE tblBagajePasageri (
 	REFERENCES tblPasageri(id_Pasager) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+INSERT INTO tblBagajePasageri (id_bagaj, id_pasager_bagaje, greutate, Tip_bagaj)
+VALUES
+(1, 1, 20.5, 'Valiză'),
+(2, 2, 15.2, 'Rucsac'),
+(3, 3, 18.7, 'Troller'),
+(4, 4, 23.0, 'Geantă de mână'),
+(5, 5, 12.8, 'Valiză'),
+(6, 6, 10.0, 'Geantă de mână'),
+(7, 7, 14.5, 'Rucsac'),
+(8, 8, 21.3, 'Troller'),
+(9, 9, 17.9, 'Valiză'),
+(10, 10, 19.6, 'Troller'),
+(11, 11, 16.4, 'Geantă de mână'),
+(12, 12, 22.1, 'Rucsac'),
+(13, 13, 18.3, 'Troller'),
+(14, 14, 25.0, 'Valiză'),
+(15, 15, 13.7, 'Geantă de mână'),
+(16, 16, 19.8, 'Rucsac'),
+(17, 17, 16.2, 'Troller'),
+(18, 18, 24.5, 'Valiză'),
+(19, 19, 11.9, 'Geantă de mână'),
+(20, 20, 17.0, 'Troller');
 
 
 CREATE TABLE tblFaruri(
@@ -510,18 +599,31 @@ VALUES
 
 CREATE TABLE tblServiciiSpeciale (
 	idServiciu INT  PRIMARY KEY,
-	TipServicii_Speciale VARCHAR(50),
+	TipServicii_Speciale VARCHAR(100),
 	id_pasager_serviciu INT,
 	CONSTRAINT fk_id_pasager_serviciu FOREIGN KEY (id_pasager_serviciu) 
 	REFERENCES tblPasageri(id_Pasager) ON DELETE CASCADE ON UPDATE CASCADE
 
 );
 
+INSERT INTO tblServiciiSpeciale (idServiciu, TipServicii_Speciale, id_pasager_serviciu)
+VALUES
+(1, 'Asistență la scaun cu rotile', 1),
+(2, 'Preferințe pentru animale de companie în cabina pasagerilor', 2),
+(3, 'Asistență pentru nevăzători', 4),
+(4, 'Asistență pentru nevăzători', 5),
+(5, 'Asistență pentru surzi', 7),
+(6, 'Asistență la scaun cu rotile', 9),
+(7, 'Asistență la scaun cu rotile', 10),
+(8, 'Asistență pentru surzi', 14),
+(9, 'Asistență la scaun cu rotile', 16),
+(10, 'Asistență pentru nevăzători', 19);
 
 
 
 
-CREATE TABLE tblLimbiStraine (
+
+/*CREATE TABLE tblLimbiStraine (
 	id_limbaStraina INT  PRIMARY KEY,
 	id_MembruEchipaj_limba INT,
 	id_angajat_limba INT,
@@ -531,7 +633,7 @@ CREATE TABLE tblLimbiStraine (
 	REFERENCES tblEchipajVas (id_MembruEchipaj) ON DELETE CASCADE ON UPDATE CASCADE,
 	CONSTRAINT fk_id_angajat_limba FOREIGN KEY(id_angajat_limba) 
 	REFERENCES tblAngajatiPort (IdAngajat) ON DELETE CASCADE ON UPDATE CASCADE
-);
+);*/
 
 
 
@@ -541,7 +643,11 @@ CREATE TABLE tblEscalaVase (
 	id_Port_escala INT NOT NULL,
 	numePortEscala varchar(50),
 	data_escala DATE,
-	motiv_escala VARCHAR(100)
+	motiv_escala VARCHAR(100).
+	CONSTRAINT fk_id_VasEscala FOREIGN KEY(id_Vas_Escala) 
+	REFERENCES tblVaseAsteptate (id_Vas_nou) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT fk_id_PortEscala FOREIGN KEY(id_Port_escala) 
+	REFERENCES tblPorturi (id_Port) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 
