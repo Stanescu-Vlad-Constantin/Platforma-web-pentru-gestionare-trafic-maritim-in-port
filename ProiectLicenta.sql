@@ -339,7 +339,7 @@ VALUES
 (17, 4, 'Inginer de sistem', 'Choi', 'Yuna', 18, 'Coreeană', '1967-12-05', '+82 10-8765-4321', 'Feminin'),
 (18, 4, 'Ofițer de comunicații', 'Smith', 'Sophie', 11, 'Americană', '1982-11-18', '+1 (555) 987-6543', 'Feminin'),
 (19, 4, 'Electrician', 'Nguyen', 'Quang', 9, 'Vietnameză', '1991-04-22', '+84 123 456 789', 'Masculin'),
-(20, 4, 'Gestionar', 'Patel', 'Mira', 15, 'Indiană', '1977-08-08', '+91 98765 43210', 'Feminin');
+(20, 4, 'Gestionar', 'Patel', 'Mira', 15, 'Indiană', '1977-08-08', '+91 90765 43210', 'Feminin');
 
 
 
@@ -369,7 +369,7 @@ VALUES
 (3, 1, 'Kim', 'Soo Min', 'Coreeană', '1995-04-10', 'GHI246813579', 'C34', 'Seoul', '+82 10-9876-5432', 'Feminin', 'soomin.kim@example.com'),
 (4, 1, 'Müller', 'Hans', 'Germană', '1980-12-25', 'JKL369258147', 'D45', 'Berlin', '+49 172 1234567', 'Masculin', 'hans.muller@example.com'),
 (5, 1, 'Suzuki', 'Takahiro', 'Japoneză', '1978-10-30', 'MNO147258369', 'E56', 'Tokyo', '+81 90-1234-5678', 'Masculin', 'takahiro.suzuki@example.com'),
-(6, 1, 'Nguyen', 'Thi Minh', 'Vietnameză', '1992-03-05', 'PQR582369147', 'F67', 'Ho Chi Minh City', '+84 123 456 789', 'Feminin', 'minh.thi@example.com'),
+(6, 1, 'Nguyen', 'Thi Minh', 'Vietnameză', '1992-03-05', 'PQR582369147', 'F67', 'Ho Chi Minh City', '+84 120 456 789', 'Feminin', 'minh.thi@example.com'),
 (7, 1, 'Lopez', 'Ana', 'Mexicană', '1987-09-12', 'STU951753852', 'G78', 'Mexico City', '+52 1 55 1234 5678', 'Feminin', 'ana.lopez@example.com'),
 (8, 1, 'Kumar', 'Rajesh', 'Indiană', '1983-06-18', 'VWX369852147', 'H89', 'Mumbai', '+91 12345 67890', 'Masculin', 'rajesh.kumar@example.com'),
 (9, 1, 'Andersen', 'Erik', 'Norvegiană', '1975-11-08', 'YZA753951852', 'I90', 'Oslo', '+47 12 34 56 78', 'Masculin', 'erik.andersen@example.com'),
@@ -377,7 +377,7 @@ VALUES
 (11, 1, 'Jansen', 'Sophie', 'Olandeză', '1993-05-17', 'EFG456123789', 'K12', 'Amsterdam', '+31 6 12345678', 'Feminin', 'sophie.jansen@example.com'),
 (12, 1, 'Fernandez', 'Diego', 'Spaniolă', '1988-02-03', 'HIJ789456123', 'L23', 'Madrid', '+34 600 123 456', 'Masculin', 'diego.fernandez@example.com'),
 (13, 1, 'Wong', 'Hui Ying', 'Chineză', '1990-09-28', 'KLM987654321', 'M34', 'Shanghai', '+86 138 0012 3456', 'Feminin', 'huiying.wong@example.com'),
-(14, 1, 'Patel', 'Anil', 'Indiană', '1985-04-14', 'NOP369852147', 'N45', 'Mumbai', '+91 98765 43210', 'Masculin', 'anil.patel@example.com'),
+(14, 1, 'Patel', 'Anil', 'Indiană', '1985-04-14', 'NOP369852147', 'N45', 'Mumbai', '+91 18765 43210', 'Masculin', 'anil.patel@example.com'),
 (15, 1, 'Garcia', 'Elena', 'Spaniolă', '1995-11-20', 'QRS123456789', 'O56', 'Barcelona', '+34 612 345 678', 'Feminin', 'elena.garcia@example.com'),
 (16, 1, 'Müller', 'Anna', 'Germană', '1987-07-05', 'TUV987654321', 'P67', 'Berlin', '+49 173 4567890', 'Feminin', 'anna.muller@example.com'),
 (17, 1, 'Choi', 'Yong Jun', 'Coreeană', '1982-01-10', 'VWX369852741', 'Q78', 'Seoul', '+82 10-8765-4321', 'Masculin', 'yongjun.choi@example.com'),
