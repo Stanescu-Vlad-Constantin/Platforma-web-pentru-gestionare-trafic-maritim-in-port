@@ -312,11 +312,34 @@ CREATE TABLE tblEchipajVas (
 	nrAni_Experienta TINYINT DEFAULT 0,
 	nationalitate varchar(100),
 	data_de_nastere date,
-	nrTelefon VARCHAR(20) UNIQUE,
+	nrTelefon VARCHAR(25) UNIQUE,
 	Sex_membruEchipaj VARCHAR(50),
 	CONSTRAINT fk_id_Vas_Echipaj FOREIGN KEY (id_Vas_Echipaj) 
 	REFERENCES tblVasePort(id_Vas) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+INSERT INTO tblEchipajVas (id_MembruEchipaj, id_Vas_Echipaj, Rol, numeMembruEchipaj, prenumeMembruEchipaj, nrAni_Experienta, nationalitate, data_de_nastere, nrTelefon, Sex_membruEchipaj)
+VALUES
+(1, 1, 'Capitan', 'Smith', 'John', 15, 'Americană', '1970-05-15', '+1 (555) 123-4567', 'Masculin'),
+(2, 1, 'Inginer', 'Garcia', 'Maria', 10, 'Spaniolă', '1980-03-20', '+34 123 456 789', 'Feminin'),
+(3, 1, 'Navigator', 'Choi', 'Seung', 8, 'Coreeană', '1985-08-10', '+82 10-1234-5678', 'Masculin'),
+(4, 1, 'Electrician', 'Müller', 'Anna', 6, 'Germană', '1990-01-25', '+49 1234 567890', 'Feminin'),
+(5, 1, 'Maistru', 'Kawasaki', 'Takashi', 12, 'Japoneză', '1975-11-30', '+81 90-1234-5678', 'Masculin'),
+(6, 2, 'Ofițer de securitate', 'Nguyen', 'Hoa', 18, 'Vietnameză', '1965-09-05', '+84 123 456 789', 'Masculin'),
+(7, 2, 'Inginer mecanic', 'Lopez', 'Elena', 14, 'Mexicană', '1972-04-12', '+52 1 55 1234 5678', 'Feminin'),
+(8, 2, 'Bucătar', 'Kumar', 'Anjali', 9, 'Indiană', '1988-07-20', '+91 12345 67890', 'Feminin'),
+(9, 2, 'Navigator', 'Andersen', 'Lars', 7, 'Norvegiană', '1993-02-18', '+47 12 34 56 78', 'Masculin'),
+(10, 2, 'Doctor', 'Park', 'Minji', 11, 'Coreeană', '1983-12-10', '+82 10-9876-5432', 'Feminin'),
+(11, 3, 'Capitan', 'Jansen', 'Andreas', 20, 'Olandeză', '1960-03-18', '+31 6 12345678', 'Masculin'),
+(12, 3, 'Inginer electrician', 'Fernandez', 'Maria', 16, 'Spaniolă', '1978-10-25', '+34 600 123 456', 'Feminin'),
+(13, 3, 'Navigator', 'Wong', 'Wei', 10, 'Chineză', '1989-06-15', '+86 138 0012 3456', 'Masculin'),
+(14, 3, 'Asistent medical', 'Patel', 'Ananya', 8, 'Indiană', '1992-09-20', '+91 98765 43210', 'Feminin'),
+(15, 3, 'Maistru', 'Garcia', 'Javier', 13, 'Spaniolă', '1973-05-30', '+34 612 345 678', 'Masculin'),
+(16, 4, 'Capitan adjunct', 'Müller', 'Hans', 22, 'Germană', '1958-07-10', '+49 172 1234567', 'Masculin'),
+(17, 4, 'Inginer de sistem', 'Choi', 'Yuna', 18, 'Coreeană', '1967-12-05', '+82 10-8765-4321', 'Feminin'),
+(18, 4, 'Ofițer de comunicații', 'Smith', 'Sophie', 11, 'Americană', '1982-11-18', '+1 (555) 987-6543', 'Feminin'),
+(19, 4, 'Electrician', 'Nguyen', 'Quang', 9, 'Vietnameză', '1991-04-22', '+84 123 456 789', 'Masculin'),
+(20, 4, 'Gestionar', 'Patel', 'Mira', 15, 'Indiană', '1977-08-08', '+91 98765 43210', 'Feminin');
 
 
 
