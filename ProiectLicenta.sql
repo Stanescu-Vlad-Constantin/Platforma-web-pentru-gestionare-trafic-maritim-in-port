@@ -650,5 +650,39 @@ CREATE TABLE tblEscalaVase (
 	REFERENCES tblPorturi (id_Port)
 );
 
+INSERT INTO tblEscalaVase (id_escala, id_Vas_escala, id_Port_escala, numePortEscala, data_escala, motiv_escala)
+VALUES
+    (1, 1, 1, 'Portul Rotterdam', '2024-05-01', 'Reparatii motor'),
+    (2, 2, 2, 'Portul Hamburg', '2024-05-02', 'Incarcare marfa'),
+    (3, 3, 3, 'Portul Antwerp', '2024-05-03', 'Descarcare marfa'),
+    (4, 4, 4, 'Portul Valencia', '2024-05-04', 'Incarcare carburant'),
+    (5, 5, 5, 'Portul Marseille', '2024-05-05', 'Descarcare carburant'),
+    (6, 6, 6, 'Portul Genoa', '2024-05-06', 'Revizie tehnica'),
+    (7, 7, 7, 'Portul Barcelona', '2024-05-07', 'Reparatii motor'),
+    (8, 8, 8, 'Portul Algeciras', '2024-05-08', 'Reparatii echipament navigational'),
+    (9, 9, 9, 'Portul Hamburg', '2024-05-09', 'Inspectie sanitara'),
+    (10, 10, 10, 'Portul Rotterdam', '2024-05-10', 'Reaprovisionare alimente si apa'),
+    (11, 11, 11, 'Portul Antwerp', '2024-05-11', 'Descarcare containere'),
+    (12, 12, 12, 'Portul Valencia', '2024-05-12', 'Incarcare containere'),
+    (13, 13, 13, 'Portul Marseille', '2024-05-13', 'Descarcare pasageri'),
+    (14, 14, 14, 'Portul Genoa', '2024-05-14', 'Incarcare pasageri'),
+    (15, 15, 15, 'Portul Barcelona', '2024-05-15', 'Reparatii structurale'),
+    (16, 16, 16, 'Portul Algeciras', '2024-05-16', 'Reparatii electrice'),
+    (17, 17, 17, 'Portul Rotterdam', '2024-05-17', 'Reparatii la echipamente de siguranta'),
+    (18, 18, 18, 'Portul Antwerp', '2024-05-18', 'Incarcare materiale'),
+    (19, 19, 19, 'Portul Valencia', '2024-05-19', 'Descarcare materiale'),
+    (20, 20, 20, 'Portul Marseille', '2024-05-20', 'Reparatii diverse'),
+    /*(21, 1, 2, 'Portul Hamburg', '2024-05-21', 'Inspectie tehnica'),
+    (22, 2, 3, 'Portul Antwerp', '2024-05-22', 'Incarcare combustibil'),
+    (23, 3, 4, 'Portul Valencia', '2024-05-23', 'Descarcare echipamente'),
+    (24, 4, 5, 'Portul Marseille', '2024-05-24', 'Reparatii la motor'),
+    (25, 5, 6, 'Portul Genoa', '2024-05-25', 'Incarcare materiale'),
+    (26, 6, 7, 'Portul Barcelona', '2024-05-26', 'Reparatii la structura navei'),
+    (27, 7, 8, 'Portul Algeciras', '2024-05-27', 'Descarcare pasageri'),
+    (28, 8, 9, 'Portul Hamburg', '2024-05-28', 'Reparatii la echipament navigational'),
+    (29, 9, 10, 'Portul Rotterdam', '2024-05-29', 'Inspectie sanitara'),
+    (30, 10, 11, 'Portul Antwerp', '2024-05-30', 'Descarcare containere');*/
+
+
 
 
